@@ -1,0 +1,87 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Styles */
+header.main-header {
+    background-color: #1c3d5a; /* Marineblau */
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0; /* Kein Padding, damit es an den Rändern ausgerichtet ist */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Breite des Containers auf 100% */
+    padding: 0 1rem; /* Optionaler kleiner Innenabstand für Luft zum Rand */
+}
+
+/* Logo Styles */
+.logo-container h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: white;
+}
+
+/* Navigation Buttons */
+.nav-buttons {
+    display: flex;
+}
+
+.nav-buttons button {
+    background-color: #1c3d5a; /* Gleiche Farbe wie der Header */
+    color: white;
+    border: 2px solid white; /* Weiße Umrandung */
+    padding: 0.7rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 1rem;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.nav-buttons button:hover {
+    background-color: #16324a; /* Dunkleres Marineblau beim Hover */
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    padding: 2rem;
+    text-align: center;
+    margin-top: 80px; /* Platz für den fixierten Header */
+}
+
+.welcome-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #1c3d5a;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+}

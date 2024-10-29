@@ -1,0 +1,40 @@
+﻿@model User
+<html lang="en">
+
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-container">
+                <h1>Task Management App</h1>
+            </div>
+            <div class="nav-buttons">
+                <form action="@Url.Action("Register", "User")" method="get">
+                    <button type="submit">Register</button>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="login-section">
+            <h2>Login</h2>
+            <form asp-action="Login" id="login-form" method="POST">
+                <div class="input-group">
+                    <label for="Username">Email</label>
+                    <input type="email" id="email" name="Username" required>
+                </div>
+                <div class="input-group">
+                    <label for="Password">Password</label>
+                    <input type="password" id="password" name="Password" required>
+                </div>
+                <button type="submit">Login</button>
+                <p id="error-message" style="color: red;"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Task Management App. All rights reserved.</p>
+    </footer>
+</body>
+</html>

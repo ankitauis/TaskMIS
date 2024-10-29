@@ -1,0 +1,58 @@
+﻿@model List<TaskEntity>
+<section class="task-lists">
+    <div class="task-table">
+        <h3>Active Tasks</h3>
+        <table id="active-tasks">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Deadline</th>
+                    <th>Completed</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var obj in Model)
+                {
+                    if (!obj.Status)
+                    {
+                        <tr>
+                            <th>@obj.Title</th>
+                            <th>@obj.Description</th>
+                            <th>@obj.Date</th>
+                            <th>@obj.Status</th>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <div class="task-table">
+        <h3>Expired Tasks</h3>
+        <table id="expired-tasks">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Deadline</th>
+                    <th>Completed</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var obj in Model)
+                {
+                    if (!obj.Status)
+                    {
+                        <tr>
+                            <th>@obj.Title</th>
+                            <th>@obj.Description</th>
+                            <th>@obj.Date</th>
+                            <th>@obj.Status</th>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</section>

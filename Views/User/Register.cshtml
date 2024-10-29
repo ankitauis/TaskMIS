@@ -1,0 +1,48 @@
+﻿@model TaskMIS.Models.User
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-container">
+                <h1>Task Management App</h1>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="register-section">
+            <h2>Register</h2>
+            <form asp-action="Register" method="POST">
+                <div class="input-group">
+                    <label for="Username">Email</label>
+                    <input asp-for="Username" type="email" id="email" class="form-control">
+                    <span asp-validation-for="Username" class="text-danger"></span>
+                </div>
+                <div class="input-group">
+                    <label for="Password">Password</label>
+                    <input asp-for="Password" type="password" id="password" name="password" class="form-control">
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="input-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input asp-for="ConfirmPassword" type="password" id="confirm-password" class="form-control">
+                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                </div>
+                <button type="submit">Register</button>
+                <p id="error-message" style="color: red;"></p>
+            </form>
+            <p>Already have an account?  @Html.ActionLink("Sign in here", "Login", "User")</a>.</p>
+          
+
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Task Management App. All rights reserved.</p>
+    </footer>
+</body>
+</html>
